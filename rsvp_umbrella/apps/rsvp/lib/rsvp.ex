@@ -1,18 +1,15 @@
 defmodule Rsvp do
-  @moduledoc """
-  Documentation for Rsvp.
-  """
+  use Application
 
-  @doc """
-  Hello world.
+  def start(_type,_args) do 
+    import Supervisor.Spec, warn: false
 
-  ## Examples
+    children = [
+      worker(Rsvp.Repo,[])
+    ]
 
-      iex> Rsvp.hello
-      :world
+    opts = [strategy: :one_for_one, name: Rsvp.Supervisor]
+    Supervisor.start_link(children,opts)
 
-  """
-  def hello do
-    :world
-  end
+ end
 end
