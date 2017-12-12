@@ -1,0 +1,13 @@
+ <a href="<%= event_path(@conn, :show, @event.id) %>">
+    <div class="list-group-item">
+        <h2 class="list-group-item-heading"><%= @event.title %></h2>
+
+        <span>
+            <span class="text-muted"><%= @event.location %></span>
+            <span class="pull-right">
+                <strong><%= @event.date %></strong>
+            </span>
+        </span>
+
+    </div>
+</a>
