@@ -10,6 +10,7 @@ defmodule Rsvp.Application do
     children = [
       # Starts a worker by calling: Rsvp.Worker.start_link(arg)
       # {Rsvp.Worker, arg},
+      {Rsvp.Repo,_args}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
