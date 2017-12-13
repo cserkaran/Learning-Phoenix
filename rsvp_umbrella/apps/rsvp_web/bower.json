@@ -1,0 +1,21 @@
+{
+  "name": "rsvp_web",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Karan Sharma <cserkaran@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cserkaran/Learning-Phoenix",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
