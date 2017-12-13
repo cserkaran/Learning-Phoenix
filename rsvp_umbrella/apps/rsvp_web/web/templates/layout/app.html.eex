@@ -12,14 +12,23 @@
   </head>
 
   <body>
+
+    <ul class="nav nav-pills col-xs-offset-7">
+      <li><a href="/">Home</a></li>
+      <li><a href="<%= event_path(@conn, :list) %>">Events</a></li>
+      <li><a href="<%= login_path(@conn, :index) %>">Login</a></li>
+    </ul>
     <div class="container">
       <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
+       
+        <span class="title">RSVP</span>
+        <span class="sub-title">Your online directory of events</span>
+        <%= if @conn.cookies["user_name"] do %>  
+          <span>  
+            Hello, <%= @conn.cookies["user_name"] %>
+          </span>
+        <% end %>
+     
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
